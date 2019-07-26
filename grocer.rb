@@ -1,8 +1,8 @@
 def consolidate_cart(cart)
   # code here
   unique_items = {}
-  cart.each do  |hash|
-    hash.reduce({}) do |memo, (key, value)|
+  cart.each do |hash|
+    hash.each do |key, value|
       if unique_items[key]
         unique_items[key][:count] += 1
       else
